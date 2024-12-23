@@ -1,9 +1,12 @@
 #import "settings/variables.typ": *
 #import "settings/lib.typ": thesis
-#import "@preview/acrostiche:0.5.0": acr, acrpl, acrfull, acrfullpl
-#include "settings/acronyms.typ"
+#import "@preview/glossy:0.4.0": *
+
+// Init glossary
+#show: init-glossary.with(yaml("/glossary.yaml"))
 
 #set text(font: "Aptos")
+
 
 #show: doc => thesis(
     title: topicOfPaper,
@@ -29,5 +32,3 @@
     ),
     caption: [Eine tolle Tabelle]
 )
-
-Um ein Akronym zu nutzen wird `typst #acr` genutzt. #acr("la")

@@ -1,7 +1,10 @@
 #import "@preview/chic-hdr:0.4.0": *
 #import "variables.typ": *
 #import "datefmt.typ": dateFmt, dateFmtToday
-#import "@preview/acrostiche:0.5.0": print-index
+#import "@preview/glossy:0.4.0": *
+
+#show: init-glossary.with(yaml("../glossary.yaml"))
+
 
 #let thesis(
   title: topicOfPaper,
@@ -117,6 +120,7 @@
   //   // Underline for header
   //   chic-separator(on: "header", 1pt)
   // ) 
+  
   set page(
     header: [
       // Left part
@@ -165,14 +169,19 @@
   // Abkürzungsverzeichnis
   pagebreak()
   // Needed for printing
-  include "acronyms.typ"
-  print-index(
-    title: if language == "de" {
+  glossary(
+  title: 
+    if language == "de" {
       "Abkürzungsverzeichnis"
     } else {
       "List of acronyms"
-    },
-    used-only: true, delimiter: "");
+    }, // Optional: defaults to Glossary
+  ignore-case: false, // Optional: ignore case when sorting terms 
+  groups: ("Acronyms")
+  )
+
+  // Glossar
+  pagebreak()
 
   // Reset counter and set numbering to Arabic
   counter(page).update(1)
