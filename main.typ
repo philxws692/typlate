@@ -13,7 +13,7 @@
     doc
 )
 
-== Hello World
+= Hello World
 #lorem(80)
 
 #figure(
@@ -32,3 +32,6 @@
     ),
     caption: [Eine tolle Tabelle]
 )
+
+@la
+Theres also @a:html document within this website

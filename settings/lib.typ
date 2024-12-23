@@ -138,8 +138,8 @@
          headers.at(1)
        }])
 
-  outline()
 
+  outline()
   pagebreak()
 
   include "disclosure.typ"
@@ -177,7 +177,24 @@
       "List of acronyms"
     }, // Optional: defaults to Glossary
   ignore-case: false, // Optional: ignore case when sorting terms 
-  groups: ("Acronyms")
+  groups: ("Acronyms"),
+  theme: theme-academic,
+  )
+
+
+  // Glossar
+  pagebreak()
+  // Needed for printing
+  glossary(
+  title: 
+    if language == "de" {
+      "Glossar"
+    } else {
+      "Glossary"
+    }, // Optional: defaults to Glossary
+  ignore-case: false, // Optional: ignore case when sorting terms 
+  groups: (""),
+  theme: theme-academic,
   )
 
   // Glossar
@@ -186,6 +203,7 @@
   // Reset counter and set numbering to Arabic
   counter(page).update(1)
   set page(numbering: "1")
+  set heading(numbering: "1.1.")
 
   doc
 }

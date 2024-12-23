@@ -4,9 +4,9 @@ html:
   long: Hypertext Markup Language
   longarticle: a
   description: A standard language for creating web pages
-  group: Web
 
 la:
   short: LATATW
+  long: Long And Tedious Acronym To Write
   article: a
   group: Acronyms
