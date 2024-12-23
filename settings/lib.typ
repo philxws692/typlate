@@ -1,6 +1,7 @@
 #import "@preview/chic-hdr:0.4.0": *
 #import "variables.typ": *
 #import "datefmt.typ": dateFmt, dateFmtToday
+#import "@preview/acrostiche:0.5.0": print-index
 
 #let thesis(
   title: topicOfPaper,
@@ -138,6 +139,40 @@
   pagebreak()
 
   include "disclosure.typ"
+
+  // Abbildungsverzeichnis
+  pagebreak()
+  outline(
+    title: if language == "de" {
+      "Abbildungsverzeichnis"
+    } else {
+      "List of figures"
+    },
+    target: figure.where(kind: image)
+  )
+
+  // Tabellenverzeichnis
+  pagebreak()
+  outline(
+    title: if language == "de" {
+      "Tabellenverzeichnis"
+    } else {
+      "List of tables"
+    },
+    target: figure.where(kind: table)
+  )
+
+  // Abkürzungsverzeichnis
+  pagebreak()
+  // Needed for printing
+  include "acronyms.typ"
+  print-index(
+    title: if language == "de" {
+      "Abkürzungsverzeichnis"
+    } else {
+      "List of acronyms"
+    },
+    used-only: true, delimiter: "");
 
   // Reset counter and set numbering to Arabic
   counter(page).update(1)
