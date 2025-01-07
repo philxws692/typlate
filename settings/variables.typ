@@ -11,7 +11,7 @@
 #let surname = "Mustermann"
 #let name = "Max"
 #let matrNumber = "1234567"
-#let supervisor = "John Doe"
+#let supervisor = "John Dough"
 
 #let startDate = datetime(
   year: 2024,
