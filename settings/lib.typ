@@ -105,9 +105,9 @@
 
   // Set headers
   // show: chic.with(
-  //   chic-footer(
-  //       center-side: chic-page-number()
-  //   ),
+  //   // chic-footer(
+  //   //     center-side: chic-page-number()
+  //   // ),
   //   chic-header(
   //     // Set title as left header as default
   //     left-side: if headers.at(0) == "" {
@@ -141,7 +141,11 @@
          dateFmtToday(language, true)
        } else {
          headers.at(1)
-       }])
+       }
+      #v(-.2cm)
+      #line(length: 100%)
+    ]
+  )
 
 
   outline()
@@ -169,6 +173,17 @@
       "List of tables"
     },
     target: figure.where(kind: table)
+  )
+
+  // Code Verzeichnis
+  pagebreak()
+  visible_outline(
+    title: if language == "de" {
+      "Programmcodeverzeichnis"
+    } else {
+      "Listings"
+    },
+    target: figure.where(kind: block)
   )
 
   // Abkürzungsverzeichnis
