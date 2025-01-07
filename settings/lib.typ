@@ -5,6 +5,11 @@
 
 #show: init-glossary.with(yaml("../glossary.yaml"))
 
+#let visible_outline(..args) = {
+  show outline: set heading(outlined: true)
+  outline(..args)
+}
+
 
 #let thesis(
   title: topicOfPaper,
@@ -146,7 +151,7 @@
 
   // Abbildungsverzeichnis
   pagebreak()
-  outline(
+  visible_outline(
     title: if language == "de" {
       "Abbildungsverzeichnis"
     } else {
@@ -157,7 +162,7 @@
 
   // Tabellenverzeichnis
   pagebreak()
-  outline(
+  visible_outline(
     title: if language == "de" {
       "Tabellenverzeichnis"
     } else {
