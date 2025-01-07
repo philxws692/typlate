@@ -2,6 +2,12 @@
 #import "settings/lib.typ": thesis
 #import "@preview/glossy:0.4.0": *
 
+// Needed for cool code blocks
+#import "@preview/codly-languages:0.1.3": *
+#import "@preview/codly:1.1.0": *
+#show: codly-init
+#codly(languages: codly-languages)
+
 // Init glossary
 #show: init-glossary.with(yaml("/glossary.yaml"))
 
@@ -35,3 +41,26 @@
 
 @la
 Theres also @a:html document within this website
+
+#figure(   
+    [```go
+    package main
+
+    import "fmt"
+
+    func main() {
+        fmt.Println("Hello World!")
+    }
+    ```],
+    caption: [Hello World in Golang]
+)
+
+Simple rust Hello World
+#figure(
+    [```rust
+    fn main() {
+        println!("Hello World");
+    }
+    ```],
+    caption: [Hello World in Rust]
+)
