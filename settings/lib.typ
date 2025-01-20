@@ -176,15 +176,15 @@
   )
   
   // Code Verzeichnis
-  // pagebreak()
-  // visible_outline(
-  //   title: if language == "de" {
-  //     "Codeverzeichnis"
-  //   } else {
-  //     "Code snippets"
-  //   },
-  //   target: figure.where(kind: type(```go ```))
-  // )
+  pagebreak()
+  visible_outline(
+    title: if language == "de" {
+      "Codeverzeichnis"
+    } else {
+      "Code snippets"
+    },
+    target: figure.where(kind: raw)
+  )
 
 
   // Abkürzungsverzeichnis
