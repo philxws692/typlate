@@ -29,7 +29,7 @@
   grid(
     columns: (1fr, 2fr, 1fr),
     rows: 55pt,
-    scale(120%, image("../assets/schwarz_logo.jpg")),
+    scale(120%, image("../assets/schwarz_logo.svg")),
     text(""),
     scale(115%, image("../assets/dhbw_logo.jpg"))
   )
@@ -174,17 +174,18 @@
     },
     target: figure.where(kind: table)
   )
-
+  
   // Code Verzeichnis
-  pagebreak()
-  visible_outline(
-    title: if language == "de" {
-      "Programmcodeverzeichnis"
-    } else {
-      "Listings"
-    },
-    target: figure.where(kind: block)
-  )
+  // pagebreak()
+  // visible_outline(
+  //   title: if language == "de" {
+  //     "Codeverzeichnis"
+  //   } else {
+  //     "Code snippets"
+  //   },
+  //   target: figure.where(kind: type(```go ```))
+  // )
+
 
   // Abkürzungsverzeichnis
   pagebreak()
