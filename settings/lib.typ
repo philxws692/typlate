@@ -72,7 +72,7 @@
   v(0.2cm)
   h(0.23cm)
   if language == "de" {
-    "Abgabedatum:       " + dateFmt(language, false, datetime(year: 2024, month: 10, day: 4))
+    "Abgabedatum:       " + dateFmt(language, false, submissionDate)
   }
   v(0.5cm)
 

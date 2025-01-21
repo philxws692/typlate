@@ -24,3 +24,9 @@
   month: 12,
   day: 1
 )
+
+#let submissionDate = datetime(
+  year: 2024,
+  month: 10,
+  day: 04
+)
