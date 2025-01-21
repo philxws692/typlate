@@ -1,6 +1,6 @@
 #import "variables.typ": *
 #import "datefmt.typ": dateFmt, dateFmtToday
-#import "@preview/glossy:0.4.0": *
+#import "@preview/glossy:0.5.2": *
 
 #show: init-glossary.with(yaml("../glossary.yaml"))
 
