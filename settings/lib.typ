@@ -1,4 +1,3 @@
-#import "@preview/chic-hdr:0.4.0": *
 #import "variables.typ": *
 #import "datefmt.typ": dateFmt, dateFmtToday
 #import "@preview/glossy:0.4.0": *
@@ -102,29 +101,6 @@
   // Set counter to first page
   counter(page).update(1)
   set page(numbering: "I")
-
-  // Set headers
-  // show: chic.with(
-  //   // chic-footer(
-  //   //     center-side: chic-page-number()
-  //   // ),
-  //   chic-header(
-  //     // Set title as left header as default
-  //     left-side: if headers.at(0) == "" {
-  //       title
-  //     } else {
-  //       headers.at(0)
-  //     },
-  //     // Set date as right header as default
-  //     right-side: if headers.at(1) == "" {
-  //       dateFmtToday(language, true)
-  //     } else {
-  //       headers.at(1)
-  //     }
-  //   ),
-  //   // Underline for header
-  //   chic-separator(on: "header", 1pt)
-  // ) 
   
   set page(
     header: [
@@ -199,7 +175,7 @@
     }, // Optional: defaults to Glossary
   ignore-case: false, // Optional: ignore case when sorting terms 
   groups: ("Acronyms"),
-  theme: theme-academic,
+  theme: theme-chicago-index,
   )
 
 
@@ -215,7 +191,7 @@
     }, // Optional: defaults to Glossary
   ignore-case: false, // Optional: ignore case when sorting terms 
   groups: (""),
-  theme: theme-academic,
+  theme: theme-chicago-index,
   )
 
   // Glossar
