@@ -1,4 +1,4 @@
-#import "variables.typ": *
+
 #import "datefmt.typ": dateFmt, dateFmtToday
 #import "@preview/glossy:0.5.2": *
 
@@ -9,18 +9,21 @@
 
 
 #let thesis(
-  title: topicOfPaper,
-  author: author,
+  title: "",
   language: "de",
   campus: "Mannheim",
   headers: ("", ""),
   glossary-file: yaml("../glossary.yaml"),
   bibliography-file: "../bibliography.bib",
   appendix-file: "../basic_appendix.typ",
+  variables-file: "variables.typ",
   doc,
 ) = {
   
+  import variables-file: *
   show: init-glossary.with(glossary-file)
+
+  title = topicOfPaper
 
   set page(
     paper: "a4"
