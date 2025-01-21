@@ -32,6 +32,9 @@
     margin: 2.5cm
   )
 
+
+  set raw(syntaxes: "/assets/splunk.sublime-syntax")
+
   // Add header images
   grid(
     columns: (1fr, 2fr, 1fr),
