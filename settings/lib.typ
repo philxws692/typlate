@@ -2,8 +2,6 @@
 #import "datefmt.typ": dateFmt, dateFmtToday
 #import "@preview/glossy:0.5.2": *
 
-#show: init-glossary.with(yaml("../glossary.yaml"))
-
 #let visible_outline(..args) = {
   show outline: set heading(outlined: true)
   outline(..args)
@@ -16,9 +14,12 @@
   language: "de",
   campus: "Mannheim",
   headers: ("", ""),
+  glossary-file: yaml("../glossary.yaml"),
+  bibliography-file: "../bibliography.bib",
   doc,
 ) = {
-
+  
+  show: init-glossary.with(glossary-file)
 
   set page(
     paper: "a4"
@@ -198,9 +199,16 @@
   pagebreak()
 
   // Reset counter and set numbering to Arabic
+  context counter("antimatter").update(counter(page).get())
   counter(page).update(1)
   set page(numbering: "1")
   set heading(numbering: "1.1.")
 
   doc
+
+  set page(numbering: "I")
+  context counter(page).update(counter("antimatter").get())
+
+  bibliography(bibliography-file, title: if language == "de" {"Literaturverzeichnis"} else {"Bibliography"})
+
 }
