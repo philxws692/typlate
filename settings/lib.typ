@@ -16,6 +16,7 @@
   headers: ("", ""),
   glossary-file: yaml("../glossary.yaml"),
   bibliography-file: "../bibliography.bib",
+  appendix-file: "../basic_appendix.typ",
   doc,
 ) = {
   
@@ -206,8 +207,21 @@
 
   doc
 
+  pagebreak()
+
   set page(numbering: "I")
+  set heading(numbering: none)
   context counter(page).update(counter("antimatter").get())
+
+  if language == "de" {
+    [= Anhang]
+  } else {
+    [= Appendix]
+  }
+
+  include "../basic_appendix.typ"
+
+  pagebreak()
 
   bibliography(bibliography-file, title: if language == "de" {"Literaturverzeichnis"} else {"Bibliography"})
 
