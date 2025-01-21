@@ -1,6 +1,7 @@
 
 #import "datefmt.typ": dateFmt, dateFmtToday
 #import "@preview/glossy:0.5.2": *
+#import "disclosure.typ": disclosure
 
 #let visible_outline(..args) = {
   show outline: set heading(outlined: true)
@@ -132,7 +133,7 @@
   outline()
   pagebreak()
 
-  include "disclosure.typ"
+  disclosure(company)
 
   // Abbildungsverzeichnis
   pagebreak()

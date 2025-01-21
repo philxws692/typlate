@@ -1,5 +1,4 @@
-#import "variables.typ": company
-
+#let disclosure(company) = [
 = Sperrvermerk
 #v(.5cm)
 Die vorliegende Arbeit beinhaltet vertrauliche Informationen der Firma #text(company, style: "italic").
@@ -10,3 +9,4 @@ zu welchem Zeitpunkt auch immer, sind grundsätzlich untersagt. Ausnahmen bedür
 schriftlichen Genehmigung der #text(company, style: "italic"). Eine Weitergabe an Mitarbeiter
 der Hochschule aufgrund fachlicher Belange oder für administrative Zwecke ist von dieser
 Regelung explizit ausgenommen.
+]
