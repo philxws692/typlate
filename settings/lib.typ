@@ -227,6 +227,6 @@
 
   pagebreak()
 
-  bibliography(bibliography-file, title: if language == "de" {"Literaturverzeichnis"} else {"Bibliography"})
+  bibliography(bibliography-file, title: if language == "de" {"Literaturverzeichnis"} else {"Bibliography"}, style: "ieee")
 
 }
