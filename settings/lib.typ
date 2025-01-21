@@ -219,7 +219,7 @@
     [= Appendix]
   }
 
-  include "../basic_appendix.typ"
+  include appendix-file
 
   pagebreak()
 
