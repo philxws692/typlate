@@ -18,6 +18,7 @@
   bibliography-file: "../bibliography.bib",
   appendix-file: "../basic_appendix.typ",
   variables-file: "variables.typ",
+  justify: true,
   doc,
 ) = {
   
@@ -27,7 +28,8 @@
   title = topicOfPaper
 
   set page(
-    paper: "a4"
+    paper: "a4",
+    margin: 2.5cm
   )
 
   // Add header images
@@ -133,7 +135,7 @@
   outline()
   pagebreak()
 
-  disclosure(company)
+  disclosure(company, justify)
 
   // Abbildungsverzeichnis
   pagebreak()
@@ -208,6 +210,8 @@
   counter(page).update(1)
   set page(numbering: "1")
   set heading(numbering: "1.1.")
+
+  set par(justify: justify)
 
   doc
 

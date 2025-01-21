@@ -1,4 +1,4 @@
-#let disclosure(company) = [
+#let disclosure(company, justify) = par(justify: justify)[
 = Sperrvermerk
 #v(.5cm)
 Die vorliegende Arbeit beinhaltet vertrauliche Informationen der Firma #text(company, style: "italic").
