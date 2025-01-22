@@ -33,7 +33,7 @@
   )
 
 
-  set raw(syntaxes: "/assets/splunk.sublime-syntax")
+  set raw(syntaxes: "../assets/splunk.sublime-syntax")
 
   // Add header images
   grid(
