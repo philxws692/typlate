@@ -13,6 +13,9 @@
 #let matrNumber = "1234567"
 #let supervisor = "John Dough"
 
+#let typeOfPaper = "Projektarbeit"
+#let location = "Ort"
+
 #let startDate = datetime(
   year: 2024,
   month: 10,

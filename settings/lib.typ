@@ -2,6 +2,7 @@
 #import "datefmt.typ": dateFmt, dateFmtToday
 #import "@preview/glossy:0.5.2": *
 #import "disclosure.typ": disclosure
+#import "declaration-of-authorship.typ": declaration-of-authorship
 
 #let visible_outline(..args) = {
   show outline: set heading(outlined: true)
@@ -11,7 +12,7 @@
 
 #let thesis(
   title: "",
-  language: "de",
+  //language: "de",
   campus: "Mannheim",
   headers: ("", ""),
   glossary-file: yaml("../glossary.yaml"),
@@ -139,6 +140,10 @@
   pagebreak()
 
   disclosure(company, justify)
+
+  pagebreak()
+
+  declaration-of-authorship(true, variables-file)
 
   // Abbildungsverzeichnis
   pagebreak()
