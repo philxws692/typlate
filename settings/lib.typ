@@ -139,11 +139,11 @@
   outline()
   pagebreak()
 
-  disclosure(company, justify)
+  disclosure(justify, variables-file)
 
   pagebreak()
 
-  declaration-of-authorship(true, variables-file)
+  declaration-of-authorship(justify, variables-file)
 
   // Abbildungsverzeichnis
   pagebreak()
