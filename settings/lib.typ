@@ -1,6 +1,6 @@
 
 #import "datefmt.typ": dateFmt, dateFmtToday
-#import "@preview/glossy:0.5.2": *
+#import "@preview/glossy:0.7.0": *
 #import "disclosure.typ": disclosure
 #import "declaration-of-authorship.typ": declaration-of-authorship
 
