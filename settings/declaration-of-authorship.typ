@@ -7,7 +7,7 @@
       #v(.5cm)
 
       #par(justify: justify)[
-        Ich versichere hiermit, dass ich meine #typeOfPaper mit dem Thema: #topicOfPaper selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.
+        Ich versichere hiermit, dass ich meine #typeOfPaper mit dem Thema: #text(style: "italic", topicOfPaper) selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.
       ]
       #par(justify: justify)[
         Ich versichere zudem, dass die eingereichte elektronische Fassung mit der gedruckten Fassung übereinstimmt#footnote("falls beide Fassungen gefordert sind").
