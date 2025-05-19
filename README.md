@@ -1,0 +1,3 @@
+# typlate
+
+Typst thesis template

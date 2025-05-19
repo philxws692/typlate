@@ -1,0 +1,12 @@
+html:
+  short: HTML
+  article: an
+  long: Hypertext Markup Language
+  longarticle: a
+  description: A standard language for creating web pages
+
+la:
+  short: LATATW
+  long: Long And Tedious Acronym To Write
+  article: a
+  group: Acronyms
